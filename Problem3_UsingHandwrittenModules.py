@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 # Using your own module
 
-# Creating your module
+# A) Creating your module: Good news! We are already done with this, it is our code in problem 2!
 
-# Importing your module
+# B) Import the function plot_quasars from your module
 
-# Using your module
+# C) Using your module: go ahead an use plot_quasars here.
+
+# NOTE: if your module wasn't in the same directory as the directory from which you run the python interpreter, you will have to make sure the directory it is in is on the PYTHONPATH
