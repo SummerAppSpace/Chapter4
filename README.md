@@ -1,5 +1,5 @@
 # Assignments for Chapter 4 of Summer App Space Curriculum
-##`Problem1_Testing.py`
+## `Problem1_Testing.py`
 ### PART 1:
 * Run the code, save the file, exit, then execute from the bash console:
 ```python3.5 Problem1_Testing.py```
@@ -30,13 +30,13 @@
 * B)  have all the arguments be default arguments set to the defaults that they are within plot currently.
 * C) change the name of the figure depending on the combination of arguments given so that with each combination a new figure name is produced
 * D) Try this out with many different combinations of arguments. Research the plot command to try to change the marker, markersize, linestyle, etc. appropriately
-#`Problem3_UsingHandwrittenModules.py`
+# `Problem3_UsingHandwrittenModules.py`
  Using your own module
 * A) Creating your module: Good news! We are already done with this, it is our code in problem 2!
 * B) Import the function plot_quasars from your module
 * C) Using your module: go ahead an use plot_quasars here.
  NOTE: if your module wasn't in the same directory as the directory from which you run the python interpreter, you will have to make sure the directory it is in is on the PYTHONPATH
-#`Problem4_PythonScript.py`
+# `Problem4_PythonScript.py`
 * A) You will need to install healpy from the bash console with `pip3.5 install --user healpy`
 **This installation may fail. It is common for software you work with to fail in its automatic install.
 **See if you can debug the failure. Ask for help and ideas. Hint: put -v after install to get a verbose output
