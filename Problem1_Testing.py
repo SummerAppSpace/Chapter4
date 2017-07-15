@@ -10,10 +10,11 @@
 
 # PART 3: 
 # There is something wrong with the astroML package that is causing it to crash! We will fix this error and then try again
-# A)
+# A) Go to the directory astroML in which the git respository is located for the code. Go to the subdirectory datasets
+# open the file sdss_specgals.py and edit the DATA_URL tuple to be correct
 # B) Reinstall astroML by executing on the bash console:
 # python3.5 setup.py install --user
-# C) Execute this file again. Look at the image that the code prints out
+# C) Execute this file again. Look at the image that the code prints out.
 
 # PART 4:
 # A) Put all the code after the imports in a function that takes a single argument, the projection
