@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+# Put in a function
+# A) put all of this code into a function that takes a few arguments, namely the marker, markersize, lignstyle and color call this function plot_quasars
+# B)  have all the arguments be default arguments set to the defaults that they are within plot currently.
+# C) change the name of the figure depending on the combination of arguments given so that with each combination a new figure name is produced
+# D) Try this out with many different combinations of arguments. Research the plot command to try to change the marker, markersize, linestyle, etc. appropriately
+
+
+
 # Author: Jake VanderPlas
 # License: BSD
 #   The figure produced by this code is published in the textbook
@@ -41,9 +49,3 @@ ax.set_ylabel(r'${\rm r-i}$')
 fig.savefig("problem2.png")
 
 
-
-# Optional arguments
-
-# Default arguments
-
-# Keyword Arguments
