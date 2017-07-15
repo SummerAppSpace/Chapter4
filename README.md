@@ -38,10 +38,10 @@
  NOTE: if your module wasn't in the same directory as the directory from which you run the python interpreter, you will have to make sure the directory it is in is on the PYTHONPATH
 # `Problem4_PythonScript.py`
 * A) You will need to install healpy from the bash console with `pip3.5 install --user healpy`
-** This installation may fail. It is common for software you work with to fail in its automatic install.
-** See if you can debug the failure. Ask for help and ideas. Hint: put -v after install to get a verbose output
-** If there is a requirement that is not being satisfied, consider downloading and building it yourself. You may need some additional bash commands to unpack the software and some hints for building it. When you get stuck ask
-** When you build software yourself ask for some advice or look up in the README. If you get stuck, ask.
+ * This installation may fail. It is common for software you work with to fail in its automatic install.
+ * See if you can debug the failure. Ask for help and ideas. Hint: put -v after install to get a verbose output
+ * If there is a requirement that is not being satisfied, consider downloading and building it yourself. You may need some additional bash commands to unpack the software and some hints for building it. When you get stuck ask
+ * When you build software yourself ask for some advice or look up in the README. If you get stuck, ask.
 * B) Next run the code
 * C) Put the body of the code in a function that has one parameter: the title of the plot. Give this parameter a default equal to the current plot title
 * D) Practice calling your function.
