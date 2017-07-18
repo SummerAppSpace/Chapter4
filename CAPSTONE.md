@@ -19,8 +19,11 @@ Finding clusters in data: K-means
 ### Obtaining a new dataset yourself
 1. Sign up for an account at http://portal.sciserver.org/login-portal/Account/Register
 1. Login at CasJobs https://skyserver.sdss.org/CasJobs/jobdetails.aspx?id=28881961
-1. Go to the query tab. Submit your own query for data by using the code in the appendix of this readme
-1. Go to the download tab. Download your data (select the fit format) to PythonAnywhere
+1. Go to the query tab. Submit your own query for data by using the code in the appendix of this file. Make sure you change contexts in the dropdown to `DR12`
+1. Check on the progress of your query at http://skyserver.sdss.org/CasJobs/ViewJobs.aspx It will changed to Finished when successful. If there is a failure, double check that your context was correct.
+1. Go to the MyDb tab. Click on the name of your database, SDSSImagingSample. Click on Download. Select the Fit format and click Go. When the data is ready it will appear on: http://skyserver.sdss.org/CasJobs/output.aspx
+1. Download your data (select the fit format) to PythonAnywhere: 
+ 1. On the Output tab right click Download next to your data, and Copy Link Location.
  1. On PythonAnywhere, change directories into the astroML_data directory
  1. run wget on the link to your dataset (unsure what wget is? run `man wget` to find out). Make sure to remove your username from the file name and rename it so that it is named `sgSDSSimagingSample.fit`. This will ensure instead of downloading the data from a remote link which doesn't work, `astroML` will automatically use the data you have just downloaded.
 ### Working with your new data
@@ -76,7 +79,21 @@ SELECT
           (case when (p.flags & '16') = 0 then 1 else 0 end) as ISOLATED
         INTO mydb.SDSSimagingSample
         FROM PhotoTag p
-
+        WHERE
+            --- 10x2 sq.deg.
+          p.ra > 0.0 and p.ra < 10.0 and p.dec > -1 and p.dec < 1
+            --- resolved and unresolved sources
+          and (p.type = 3 OR p.type = 6) and
+            --- '4295229440' is magic code for no
+            --- DEBLENDED_AS_MOVING or SATURATED objects
+          (p.flags & '4295229440') = 0 and
+            --- PRIMARY objects only, which implies
+            --- !BRIGHT && (!BLENDED || NODEBLEND || nchild == 0)]
+          p.mode = 1 and
+            --- adopted faint limit (same as about SDSS limit)
+          p.modelMag_r < 22.5
+        --- the end of query
+    """
 ```
 The query on the SDSS server to get the data for `Problem1_Testing.py` is as follows:
 ```
