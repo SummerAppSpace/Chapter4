@@ -18,7 +18,31 @@ Change the data URL in the `sdss_sspp.py` file to be https://www.dropbox.com/s/m
 ## Part 2
 ### Obtaining a new dataset yourself
 1. Sign up for an account at CasJobs https://skyserver.sdss.org/CasJobs/jobdetails.aspx?id=28881961
-1. Submit your own query for data in the following way:
+1. Go to the query tab. Submit your own query for data by using the code in the appendix of this readme
+1. Go to the download tab. Download your data (select the fit format) to PythonAnywhere
+ 1. On PythonAnywhere, change directories into the astroML_data directory
+ 1. run wget on the link to your dataset (unsure what wget is? run `man wget` to find out). Make sure to remove your username from the file name and rename it so that it is named `sgSDSSimagingSample.fit`. This will ensure instead of downloading the data from a remote link which doesn't work, `astroML` will automatically use the data you have just downloaded.
+### Working with your new data
+1. Run the code in `Capstone_Part2.py`
+1. Modify the code from `Capstone_Part1.py` to find clusters in the new data in the galaxies and the stars.
+## Part 3
+### K-Nearest-Neighbor classifier
+Read about K-Nearest-Neighbor classifiers
+* http://astrostatistics.psu.edu/RLectures/clustering_classification_Jessi.pdf
+* https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+* https://www.youtube.com/watch?v=UqYde-LULfs
+### Get the data
+As you did in **Part 1** update the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and reinstall astroML
+### Work with the data
+1. Run the code in `Capstone_Part3.py`.
+1. Change the number of clusters, and rerun, what do you get?
+## Part 4
+How to choose what method to use: http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html
+* Pick to work with either astronomy and stellar data, solar flare data, or satellite imagery data. Obtain your dataset, adn then pick either K-Nearest-Neighbors or K-Means to divide it into categories. What categories did you come up with? Are you able to spot patterns. Write up your results. 
+
+
+# Appendix:
+The query on the SDSS server to get the data for **Part 2** is as follows:
 ```
 SELECT
           round(p.ra,6) as ra, round(p.dec,6) as dec,
@@ -50,29 +74,6 @@ SELECT
         FROM PhotoTag p
 
 ```
-1. Download your data
- 1. On python anywhere, change directories into the astroML_data directory, in your home directory
- 1. run wget on the link to your dataset. Make sure to remove your username from the file name so that it is `sgSDSSimagingSample.fit`. Then, instead of downloading the data from a remote link which doesn't work, `astroML` will automatically use the data you have downloaded.
-### Working with your new data
-1. Run the code in `Capstone_Part2.py`
-1. Modify the code from `Capstone_Part1.py` to find clusters in the new data in the galaxies and the stars.
-## Part 3
-### K-Nearest-Neighbor classifier
-Read about K-Nearest-Neighbor classifiers
-* http://astrostatistics.psu.edu/RLectures/clustering_classification_Jessi.pdf
-* https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
-* https://www.youtube.com/watch?v=UqYde-LULfs
-### Get the data
-As you did in **Part 1** update the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and reinstall astroML
-### Work with the data
-1. Run the code in `Capstone_Part3.py`.
-1. Change the number of clusters, and rerun, what do you get?
-## Part 4
-How to choose what method to use: http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html
-* Pick to work with either astronomy and stellar data, solar flare data, or satellite imagery data. Obtain your dataset, adn then pick either K-Nearest-Neighbors or K-Means to divide it into categories. What categories did you come up with? Are you able to spot patterns. Write up your results. 
-
-
-# Appendix:
 The query on the SDSS server to get the data for `Problem1_Testing.py` is as follows:
 ```
 SELECT                                                                                                                                                                                                                                                                          
