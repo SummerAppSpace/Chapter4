@@ -17,7 +17,8 @@ Finding clusters in data: K-means
 
 ## Part 2
 ### Obtaining a new dataset yourself
-1. Sign up for an account at CasJobs https://skyserver.sdss.org/CasJobs/jobdetails.aspx?id=28881961
+1. Sign up for an account at http://portal.sciserver.org/login-portal/Account/Register
+1. Login at CasJobs https://skyserver.sdss.org/CasJobs/jobdetails.aspx?id=28881961
 1. Go to the query tab. Submit your own query for data by using the code in the appendix of this readme
 1. Go to the download tab. Download your data (select the fit format) to PythonAnywhere
  1. On PythonAnywhere, change directories into the astroML_data directory
