@@ -33,6 +33,7 @@ Read about K-Nearest-Neighbor classifiers
 * https://www.youtube.com/watch?v=UqYde-LULfs
 ### Get the data
 As you did in **Part 1**either download directly to astroML_data or updated the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and reinstall astroML
+NOTE: currently there is a missing file I'm unable to regenerate myself. I'm working with the author of the file to get it to us by July 19. For now skip to Part 4.
 
 
 ### Work with the data
