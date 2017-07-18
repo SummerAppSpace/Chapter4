@@ -24,7 +24,7 @@ setup_text_plots(fontsize=8, usetex=True)
 
 #----------------------------------------------------------------------
 # get data and split into training & testing sets
-X, y = fetch_rrlyrae_combined()
+X, y = fetch_rrlyrae_combined(download_if_missing=False)
 X = X[:, [1, 0, 2, 3]]  # rearrange columns for better 1-color results
 (X_train, X_test), (y_train, y_test) = split_samples(X, y, [0.75, 0.25],
                                                      random_state=0)
@@ -57,8 +57,8 @@ for k in kvals:
 
 completeness, contamination = completeness_contamination(predictions, y_test)
 
-print "completeness", completeness
-print "contamination", contamination
+print("completeness", completeness)
+print("contamination", contamination)
 
 #------------------------------------------------------------
 # Compute the decision boundary
@@ -131,4 +131,4 @@ ax.set_xlim(0.5, 4.5)
 ax.set_ylim(-0.1, 1.1)
 ax.grid(True)
 
-plt.show()
+plt.savefig('capstone_part3.png')

@@ -59,4 +59,4 @@ for ax in (ax1, ax2, ax3, ax4):
     ax.xaxis.set_major_locator(plt.MultipleLocator(1))
     ax.yaxis.set_major_locator(plt.MultipleLocator(1))
 
-plt.show()
+plt.savefig('capstone_part2.png')

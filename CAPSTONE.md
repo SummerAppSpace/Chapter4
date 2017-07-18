@@ -9,8 +9,8 @@ Finding clusters in data: K-means
 * https://vimeo.com/110060516
 * https://www.youtube.com/watch?v=7_XGsbceUkY
 ### Get the data
-Change the data URL in the `sdss_sspp.py` file to be https://www.dropbox.com/s/m736a7j70a4p1ux/SDSSssppDR9_rerun122.fit?dl=1 and reinstall astroML to reflect the changes
-
+* Change the data URL in the `sdss_sspp.py` file to be https://www.dropbox.com/s/m736a7j70a4p1ux/SDSSssppDR9_rerun122.fit?dl=1 and reinstall astroML to reflect the changes
+* * Hint: instead of changing astroML you can also download the data to your `~/astroML_data` directory. If you make sure it is named `SDSSssppDR9_rerun122.fit` `astroML` won't try to download it again from the broken URL.
 ### Work with the data
 1. Run the code in `Capstone_Part1.py`.
 1. Change the number of clusters, and rerun, what do you get?
@@ -32,7 +32,9 @@ Read about K-Nearest-Neighbor classifiers
 * https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
 * https://www.youtube.com/watch?v=UqYde-LULfs
 ### Get the data
-As you did in **Part 1** update the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and reinstall astroML
+As you did in **Part 1**either download directly to astroML_data or updated the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and reinstall astroML
+
+
 ### Work with the data
 1. Run the code in `Capstone_Part3.py`.
 1. Change the number of clusters, and rerun, what do you get?
