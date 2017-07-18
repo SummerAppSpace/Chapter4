@@ -6,10 +6,10 @@ Finding clusters in data: K-means
 * https://en.wikipedia.org/wiki/K-means_clustering
 * https://www.datascience.com/blog/introduction-to-k-means-clustering-algorithm-learn-data-science-tutorials
 * https://vimeo.com/110060516
-## Get the data
+### Get the data
 Change the data URL in the `sdss_sspp.py` file to be https://www.dropbox.com/s/m736a7j70a4p1ux/SDSSssppDR9_rerun122.fit?dl=1 and reinstall astroML to reflect the changes
 
-## Work with the data
+### Work with the data
 1. Run the code in `Capstone_Part1.py`.
 1. Change the number of clusters, and rerun, what do you get?
 
@@ -54,3 +54,48 @@ SELECT
 ### Working with your new data
 1. Run the code in `Capstone_Part2.py`
 1. Modify the code from `Capstone_Part1.py` to find clusters in the new data in the galaxies and the stars.
+## Part 3
+### K-Nearest-Neighbor classifier
+Read about K-Nearest-Neighbor classifiers
+* https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+* https://www.youtube.com/watch?v=UqYde-LULfs
+### Get the data
+As you did in **Part 1** update the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and reinstall astroML
+### Work with the data
+1. Run the code in `Capstone_Part3.py`.
+1. Change the number of clusters, and rerun, what do you get?
+## Part 4
+The query to get the data for `Problem1_testing.py` from CasJobs SDSS Data server is given here:
+```
+SELECT                                                                                                                                                                                                                                                                          
+     G.ra, G.dec, S.mjd, S.plate, S.fiberID,                                                                                                                                                                                                                                  
+     S.z, S.zErr, S.rChi2, S.velDisp, S.velDispErr,                                                                                                                                                                                                                
+     G.extinction_r, G.petroMag_r, G.psfMag_r, G.psfMagErr_r,                                                                                                                                                                                                                      
+     G.modelMag_u, modelMagErr_u, G.modelMag_g, modelMagErr_g,                                                                                                                                                                                                                     
+     G.modelMag_r, modelMagErr_r, G.modelMag_i, modelMagErr_i,                                                                                                                                                                                                                     
+     G.modelMag_z, modelMagErr_z, G.petroR50_r, G.petroR90_r,                                                                                                                                                                   
+     GSL.nii_6584_flux, GSL.nii_6584_flux_err, GSL.h_alpha_flux,                                                                                                                                                                                                                   
+     GSL.h_alpha_flux_err, GSL.oiii_5007_flux, GSL.oiii_5007_flux_err,                                                                                                                                                                                                             
+     GSL.h_beta_flux, GSL.h_beta_flux_err, GSL.h_delta_flux,                                                                                                                                                                                                                       
+     GSL.h_delta_flux_err, GSX.d4000, GSX.d4000_err, GSE.bptclass,                                                                                                                                                                                                                 
+     GSE.lgm_tot_p50, GSE.sfr_tot_p50, G.objID, GSI.specObjID                                                                                                                                                                                                                      
+INTO mydb.SDSSspecgalsDR8 FROM SpecObj S CROSS APPLY                                                                                                                                                                                                                            
+     dbo.fGetNearestObjEQ(S.ra, S.dec, 0.06) N, Galaxy G,                                                                                                                                                                                                                          
+     GalSpecInfo GSI, GalSpecLine GSL, GalSpecIndx GSX, GalSpecExtra GSE                                                                                                                                                                                                           
+WHERE N.objID = G.objID                                                                                                                                                                                                                                                         
+     AND GSI.specObjID = S.specObjID                                                                                                                                                                                                                                               
+     AND GSL.specObjID = S.specObjID                                                                                                                                                                                                                                               
+     AND GSX.specObjID = S.specObjID                                                                                                                                                                                                                                               
+     AND GSE.specObjID = S.specObjID                                                                                                                                                                                                   
+     AND (G.petroMag_r > 10 AND G.petroMag_r < 18)                                                                                                                                                                                                                                 
+     AND (G.modelMag_u-G.modelMag_r) > 0                                                                                                                                                                                                                                           
+     AND (G.modelMag_u-G.modelMag_r) < 6                                                                                                                                                                                                                                           
+     AND (modelMag_u > 10 AND modelMag_u < 25)                                                                                                                                                                                                                                     
+     AND (modelMag_g > 10 AND modelMag_g < 25)                                                                                                                                                                                                                                     
+     AND (modelMag_r > 10 AND modelMag_r < 25)                                                                                                                                                                                                                                     
+     AND (modelMag_i > 10 AND modelMag_i < 25)                                                                                                                                                                                                                                     
+     AND (modelMag_z > 10 AND modelMag_z < 25)                                                                                                                                                                                                                                     
+     AND S.rChi2 < 2                                                                                                                                                                                                                                                               
+     AND (S.zErr > 0 AND S.zErr < 0.01)                                                                                                                                                                                                                                            
+     AND S.z > 0.02
+     ```
