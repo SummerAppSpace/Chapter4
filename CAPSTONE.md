@@ -93,7 +93,6 @@ SELECT
             --- adopted faint limit (same as about SDSS limit)
           p.modelMag_r < 22.5
         --- the end of query
-    """
 ```
 The query on the SDSS server to get the data for `Problem1_Testing.py` is as follows:
 ```
