@@ -3,9 +3,11 @@
 ## Part 1
 Finding clusters in data: K-means
 ### Learn about K-means clustering
+* http://astrostatistics.psu.edu/RLectures/clustering_classification_Jessi.pdf
 * https://en.wikipedia.org/wiki/K-means_clustering
 * https://www.datascience.com/blog/introduction-to-k-means-clustering-algorithm-learn-data-science-tutorials
 * https://vimeo.com/110060516
+* https://www.youtube.com/watch?v=7_XGsbceUkY
 ### Get the data
 Change the data URL in the `sdss_sspp.py` file to be https://www.dropbox.com/s/m736a7j70a4p1ux/SDSSssppDR9_rerun122.fit?dl=1 and reinstall astroML to reflect the changes
 
@@ -57,6 +59,7 @@ SELECT
 ## Part 3
 ### K-Nearest-Neighbor classifier
 Read about K-Nearest-Neighbor classifiers
+* http://astrostatistics.psu.edu/RLectures/clustering_classification_Jessi.pdf
 * https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
 * https://www.youtube.com/watch?v=UqYde-LULfs
 ### Get the data
@@ -65,7 +68,12 @@ As you did in **Part 1** update the link of the dataset in rrlyrae_mags.py to be
 1. Run the code in `Capstone_Part3.py`.
 1. Change the number of clusters, and rerun, what do you get?
 ## Part 4
-The query to get the data for `Problem1_testing.py` from CasJobs SDSS Data server is given here:
+How to choose what method to use: http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html
+* Pick to work with either astronomy and stellar data, solar flare data, or satellite imagery data. Obtain your dataset, adn then pick either K-Nearest-Neighbors or K-Means to divide it into categories. What categories did you come up with? Are you able to spot patterns. Write up your results. 
+
+
+# Appendix:
+The query on the SDSS server to get the data for `Problem1_Testing.py` is as follows:
 ```
 SELECT                                                                                                                                                                                                                                                                          
      G.ra, G.dec, S.mjd, S.plate, S.fiberID,                                                                                                                                                                                                                                  
@@ -98,4 +106,4 @@ WHERE N.objID = G.objID
      AND S.rChi2 < 2                                                                                                                                                                                                                                                               
      AND (S.zErr > 0 AND S.zErr < 0.01)                                                                                                                                                                                                                                            
      AND S.z > 0.02
-     ```
+```
