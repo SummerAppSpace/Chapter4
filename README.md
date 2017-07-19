@@ -3,7 +3,7 @@
 ### PART 1:
 * Run the code, save the file, exit, then execute from the bash console:
 ```python3.5 Problem1_Testing.py```
-** You WILL get a crash. We will fix this as an exercise in PART 3.
+ * You WILL get a crash. We will fix this as an exercise in PART 3.
 
 ### PART 2:
 * Wrap the entire code after the imports in a try/except block. 
@@ -12,7 +12,7 @@
 ### PART 3: 
  There is something wrong with the astroML package that is causing it to crash! We will fix this error and then try again
 * A) Go to the directory astroML in which the git respository is located for the code. Go to the subdirectory datasets.
-** open the file sdss_specgals.py and edit the DATA_URL tuple to be correct
+ * open the file sdss_specgals.py and edit the DATA_URL tuple to be correct
 * B) Reinstall astroML by executing on the bash console:
 ```python3.5 setup.py install --user```
 * C) Execute this file again. Look at the image that the code prints out.
