@@ -41,7 +41,7 @@ Read about K-Nearest-Neighbor classifiers
 * https://www.youtube.com/watch?v=UqYde-LULfs
 ### Work with the data<sup>2</sup>
 1. Run the code in `Capstone_Part3.py`.
-1. Change the number of clusters, and rerun, what do you get?
+1. Change the number of neighbors used, and rerun, what do you get? What changes?
 
 <sup>2</sup>If you have any problems reaching the data, as you did in **Part 1** either download directly to astroML_data or updated the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and https://www.dropbox.com/s/n8trp77urpbg01b/stripe82calibStars_v2.6.dat.gz?dl=1 respectively and reinstall astroML
 ## Part 4
