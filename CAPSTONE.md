@@ -13,12 +13,11 @@ Finding clusters in data: K-means
 * https://www.datascience.com/blog/introduction-to-k-means-clustering-algorithm-learn-data-science-tutorials
 * https://vimeo.com/110060516
 * https://www.youtube.com/watch?v=7_XGsbceUkY
-### Get the data
-* Change the data URL in the `sdss_sspp.py` file to be https://www.dropbox.com/s/m736a7j70a4p1ux/SDSSssppDR9_rerun122.fit?dl=1 and reinstall astroML to reflect the changes
-* * Hint: instead of changing astroML you can also download the data to your `~/astroML_data` directory. If you make sure it is named `SDSSssppDR9_rerun122.fit` `astroML` won't try to download it again from the broken URL.
-### Work with the data
-1. Run the code in `Capstone_Part1.py`.
+### Work with the data<sup>0</sup>
+1. Run the code in `Capstone_Part1.py`
 1. Change the number of clusters, and rerun, what do you get?
+
+<sup>0</sup> Note: if you have any problems with the data not being accessible, change the data URL in the `sdss_sspp.py` file to be https://www.dropbox.com/s/m736a7j70a4p1ux/SDSSssppDR9_rerun122.fit?dl=1 and reinstall astroML to reflect the changes OR instead of changing astroML you can also download the data to your `~/astroML_data` directory. If you make sure it is named `SDSSssppDR9_rerun122.fit` `astroML` won't try to download it again from the broken URL.
 
 ## Part 2
 ### Obtaining a new dataset yourself
@@ -40,14 +39,10 @@ Read about K-Nearest-Neighbor classifiers
 * http://astrostatistics.psu.edu/RLectures/clustering_classification_Jessi.pdf
 * https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
 * https://www.youtube.com/watch?v=UqYde-LULfs
-### Get the data
-As you did in **Part 1** either download directly to astroML_data or updated the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and reinstall astroML
-NOTE: currently there is a missing file I'm unable to regenerate myself. I'm working with the author of the file to get it to us by July 19. For now skip to Part 4.
-
-
-### Work with the data
+### Work with the data<sup>0</sup>
 1. Run the code in `Capstone_Part3.py`.
 1. Change the number of clusters, and rerun, what do you get?
+<sup>0</sup>If you have any problems reaching the data, as you did in **Part 1** either download directly to astroML_data or updated the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and https://www.dropbox.com/s/n8trp77urpbg01b/stripe82calibStars_v2.6.dat.gz?dl=1 respectively and reinstall astroML
 ## Part 4
 Pick one of the queries in the appendix and modify it slightly. Perhaps select for a different (recommended: smaller to ensure the output is smaller) range for one of the values. Look up what that physically means. Then, once you have your new dataset, save the old one under a new name in `~/astroML_data` and use your new dataset instead. Compare the outputs and your results. 
 ## Part 5
