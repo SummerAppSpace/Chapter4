@@ -45,7 +45,7 @@ Read about K-Nearest-Neighbor classifiers
 
 <sup>2</sup>If you have any problems reaching the data, as you did in **Part 1** either download directly to astroML_data or updated the link of the dataset in rrlyrae_mags.py to be https://www.dropbox.com/s/q2nw3jtekwjvo6c/RRLyrae.fit?dl=1 and https://www.dropbox.com/s/n8trp77urpbg01b/stripe82calibStars_v2.6.dat.gz?dl=1 respectively and reinstall astroML
 ## Part 4
-Pick one of the queries in the appendix and modify it slightly. Perhaps select for a different (recommended: smaller to ensure the output is smaller) range for one of the values. Look up what that physically means. Then, once you have your new dataset, save the old one under a new name in `~/astroML_data` and use your new dataset instead. Compare the outputs and your results. 
+Pick one of the queries in the appendix and modify it slightly. Perhaps select for a different (recommended: smaller to ensure the output is smaller) range for one of the values. Look up what that physically means. Then, once you have your new dataset, save the old one under a new name in `~/astroML_data`, your new dataset under the same name as the old one previously had, and this will let `astroML` use your new dataset instead for the same problem without further changes. Compare the outputs and your results between the different datasets.
 ## Part 5
 How to choose what method to use: http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html
 * Pick to work with either astronomy and stellar data, solar flare data, or satellite imagery data. Obtain your dataset, adn then pick either K-Nearest-Neighbors or K-Means to divide it into categories. What categories did you come up with? Are you able to spot patterns. Write up your results. 
