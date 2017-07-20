@@ -2,7 +2,7 @@
 ## Update your `git`
 Note if you've already created a git repository in your own github following the instructions in the textbook prior to the release of this file, you will have to add this git repository as a new remote and pull the code updates and CAPSTONE.md files. Do that by running
 ```
-git remote add chapter4 git@github.com:SummerAppSpace/Chapter4.git
+git remote add chapter4 https://github.com/SummerAppSpace/Chapter4.git
 git pull chapter4 master
 ```
 ## Part 1
