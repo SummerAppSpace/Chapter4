@@ -10,10 +10,10 @@
 * The exception should print the error and then on a new line "still working on it"
 
 ### PART 3: 
-Currently as of 7/19/17 there is no crash because the data is back online! This part was to illustrate what to do if the DATA_URL changes. If you don't get a crash your first run, change the DATA_URL to something that doesn't exist and reinstall `astroML` so that you do get a crash. Then change it back and reinstall. You've practiced fixing a crash in a python module!
+There may be no crash because the data is back online! This part was to illustrate what to do if the DATA_URL changes. If you don't get a crash your first run, change the DATA_URL to something that doesn't exist and reinstall `astroML` so that you do get a crash. Then change it back and reinstall. You've practiced fixing a crash in a python module!
  There is something wrong with the astroML package that is causing it to crash! We will fix this error and then try again
 * A) Go to the directory astroML in which the git respository is located for the code. Go to the subdirectory datasets.
-  * open the file sdss_specgals.py and edit the DATA_URL tuple to be correct
+  * open the file sdss_specgals.py and edit the DATA_URL tuple to be correct. The link is the following `https://www.dropbox.com/s/n29ehyhbdrlkkth/SDSSspecgalsDR8_corbett.fit?dl=1`
 * B) Reinstall astroML by executing on the bash console:
 ```python3.5 setup.py install --user```
 * C) Execute this file again. Look at the image that the code prints out.
